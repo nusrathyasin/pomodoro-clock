@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      			<!-- Library of Bootstrap -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     	    		<!-- Library of jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+           		<!-- Font style-->
+	    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Permanent+Marker" rel="stylesheet">
+      			<!-- CSS file-->
+      <link href="style.css" rel="stylesheet" type="text/css" />
+	   		 <!-- Title -->
+	    <title>Pomodoro Clock</title>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-8">
+		<!-- Title of the projectt-->
+			<div id="header" class="text-center">
+				<h1><font size="7">Pomodoro Clock</font></h1>
+			</div>
+		<!-- Break and Session length-->
+			<div id="length" class="text-center" >
+		<!--Break Length-->
+				<div id="length1" >
+					<h3> Break Length </h3>
+					<h3><button id="minus" class="btn btn-default btn-sm" onclick="decrese()">-</button> <span id="b_num">5</span> <button id="plus" class="btn btn-default btn-sm" onclick="increase()">+</button></h3>
+				</div>
+		<!--Session Length-->
+				<div id="length2">
+					<h3> Session Length </h3>
+					<h3><button id="minus" class="btn btn-default btn-sm" onclick="session_decrese()">-</button> <span id="s_num">25</span> <button id="plus" class="btn btn-default btn-sm" onclick="session_increase()">+</button></h3>
+				</div>
+			</div>
+		<!--Display the Countdown timer-->
+			<div id="clock" class="text-center">
+				<div id="runTime" onclick="countdown()">
+					<h1 id="session" class="text-center" style="padding:30px;font-size:40px" title="Click here to start">Session <br><br>25</h1>
+		<!--Restart button -->
+					<img src="restart.png" style="float:right;margin-right:80px" onclick = "restart()" title="restart" width="50" height="50">
+				</div>
+		<!--Reset button-->
+				<img src="reset.ico" style="margin-left:87px" onclick = "reseet()" title="reset"  width="50" height="50"> 
+		<!--Pause button-->
+				<img src="pause.png" onclick = "pause()" title="pause" width="50" height="50"> 
+			</div>
+		</div>
+	</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
